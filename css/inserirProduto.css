@@ -1,0 +1,33 @@
+    form {
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 27vw;
+        margin-top: 5vh;
+    }
+    
+    .content {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    input {
+        text-align: center;
+    }
+    
+    button {
+        width: auto;
+        margin: auto;
+    }
+    
+    .btns {
+        margin-top: 2vh;
+        display: flex;
+        align-items: center;
+        width: 50vw;
+    }
+    
+    textarea {
+        height: 15vh;
+    }
