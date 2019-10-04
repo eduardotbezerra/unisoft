@@ -1,0 +1,57 @@
+        .content {
+            width: 90%;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .modal {
+            width: 768px;
+            height: 1366px;
+        }
+        
+        .modal-content {
+            width: 100%;
+            height: 100%;
+        }
+        
+        table {
+            border-radius: 10px;
+            background-color: rgb(255, 72, 0);
+            color: white;
+            font-size: calc (100%-1em);
+        }
+        
+        .title {
+            background-color: rgb(8, 255, 255);
+            color: black;
+        }
+        
+        .btn {
+            height: auto;
+        }
+        
+        tr:hover {
+            color: black;
+            background: whitesmoke;
+        }
+        
+        tbody {
+            display: block;
+            height: 60vh;
+            overflow: auto;
+        }
+        
+        thead,
+        tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+        
+        thead {
+            width: calc( 100% - 1em)
+        }
+        
+        table {
+            width: 100%;
+        }
