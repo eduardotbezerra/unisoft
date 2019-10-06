@@ -30,19 +30,15 @@
       
     </header>
   <div class="content">
-  
-    
-      
-      <table class="highlight">
+      <table class="highlight white">
         <tr>
           <td class="title"><strong>Produto</strong></td>
           <td class="title"><strong>Marca</strong></td>
           <td class="title"> <strong>Quantidade</strong></td>
           <td class="title"><strong>Tipo</strong></td>
-          <td class="title"><strong>Preco</strong></td>
+          <td class="title"><strong>Preço</strong></td>
           <td class="title"><strong>Obs</strong></td>
-        </tr>
-        
+        </tr>  
       <?
       include '../php/conexao.php';
 
@@ -72,7 +68,7 @@
     <!-- Modal Structure -->
     <div id="modal1" class="modal modal-fixed-footer">
     <header class="modal-header">
-        <h4 class="center">Adicionar produto</h4>
+        <h5 class="center">Adicionar Produto</h5>
         </header>
       <div class="modal-content">
         <object data="../pages/inserirProduto.php" width = "100%;" height = "720" type=""></object>
@@ -81,12 +77,7 @@
         <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat ">Ok</a>
       </div>
     </div>
-    
-    <!-- 
-      $('.modal').modal();
-    -->
-  
-   
+ 
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <!-- Materialize JS CDN -->
