@@ -11,7 +11,7 @@
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
    
     <style>
     body {
@@ -29,7 +29,7 @@
 
 <body>
     <nav>
-        <div style="background-color: #FF1E14" class="nav-wrapper">
+        <div  class="bar-menu nav-wrapper">
             <div class="container">
                 <!-- mobile menu trigger -->
                 <a href="#" data-activates="mobile-menu" class="button-collapse show-on-large"><i
@@ -38,7 +38,7 @@
                 <ul class="right hide-on-med-and-down">
                     <div class="row">
                         <div class="col s12">
-                            <ul class="tabs " style="margin-top: 10px; background-color:  #FF1E14">
+                            <ul class="tabs " >
                             <li class="tab white-text"><a class="white-text" href="#paginaInicial"> Página Inicial</a></li>
                                 <li class="tab white-text "><a class="white-text" href="#produtos"> Produtos</a></li>
                                 <li class="tab white-text"><a class="white-text" href="#clientes">Clientes</a></li>
