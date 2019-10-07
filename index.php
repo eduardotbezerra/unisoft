@@ -33,8 +33,5 @@
             </form>
         </div>
     </section>
-
-
-    </section>
 </body>
 </html>
