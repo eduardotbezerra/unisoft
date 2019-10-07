@@ -1,3 +1,7 @@
+    body {
+        font-family: Roboto, Arial, sans-serif;
+    }
+    
     form {
         width: 50vw;
         display: flex;

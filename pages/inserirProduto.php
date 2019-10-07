@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="../css/inserirProduto.css">
-    <!-- Used as an example only to position the footer at the end of the page.
-    You can delete these styles or move it to your custom css file -->
+    
     <style>
         body {
+           
+
             display: flex;
             min-height: 100vh;
             flex-direction: column;

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,25 +18,7 @@ if ($obj_mysqli->connect_errno) {
 }
  
 mysqli_set_charset($obj_mysqli, 'utf8');
-//Validando a existência dos dados
-if(isset($_POST["produto"]) && isset($_POST["marca"]) && isset($_POST["quantidade"]) && isset($_POST["tipo"])&& isset($_POST["obs"]))
-{
-	if(empty($_POST["produto"]))
-		$erro = "Campo produto é obrigatório";
-	else
-	if(empty($_POST["marca"]))
-		$erro = "Campo marca é obrigatório";
-	else
-	if(empty($_POST["quantidade"]))
-		$erro = "Campo quantidade obrigatório";
-	else
-	if(empty($_POST["tipo"]))
-		$erro = "Campo tipo é obrigatório";
-	else
 	
-	
-	
-	{
  
 
         $vproduto   = $_POST["produto"];
@@ -60,8 +40,8 @@ if(isset($_POST["produto"]) && isset($_POST["marca"]) && isset($_POST["quantidad
 			</script>
 			";
 		}
-	}
-}
+	s
+
     
 ?>
 </body>

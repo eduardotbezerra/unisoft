@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="../css/listarProdutos.css">
-    <!-- Used as an example only to position the footer at the end of the page.
-    You can delete these styles or move it to your custom css file -->
+    
     <style>
       body {
+        font-family: Roboto, Arial, sans-serif;
+
         display: flex;
         min-height: 100vh;
         flex-direction: column;
@@ -63,7 +64,7 @@
       </table>
 
   </div>
-   -->
+
   
     <!-- Modal Structure -->
     <div id="modal1" class="modal modal-fixed-footer">
