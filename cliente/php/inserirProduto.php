@@ -10,14 +10,14 @@
 
 <body>
     <?php
-$obj_mysqli = new mysqli("localhost", "root", "", "unisoft");
+$con = new mysqli("localhost", "root", "", "unisoft");
  
-if ($obj_mysqli->connect_errno) {
+if ($con->connect_errno) {
     echo "Ocorreu um erro na conexão com o banco de dados.";
     exit;
 }
  
-mysqli_set_charset($obj_mysqli, 'utf8');
+mysqli_set_charset($con, 'utf8');
 	
  
 
@@ -28,7 +28,7 @@ mysqli_set_charset($obj_mysqli, 'utf8');
         $vobs     = $_POST["obs"];
         $vpreco     = $_POST["preco"];
         
-        $stmt = $obj_mysqli->prepare("INSERT INTO `produtos` (`produto`,`marca`,`quantidade`,`tipo`,`obs`,`preco`) VALUES (?,?,?,?,?,?)");
+        $stmt = $con->prepare("INSERT INTO `produtos` (`produto`,`marca`,`quantidade`,`tipo`,`obs`,`preco`) VALUES (?,?,?,?,?,?)");
         $stmt->bind_param('ssssss', $vproduto, $vmarca, $vquantidade, $vtipo, $vobs, $vpreco);
         
         if (!$stmt->execute()) {

@@ -21,7 +21,6 @@ body {
 table {
     border-radius: 10px;
     color: black;
-    font-size: calc (100%-1em);
 }
 
 .title {
@@ -59,4 +58,18 @@ thead {
 table {
     width: 100%;
     margin-top: 2vh;
+    display: flex;
+    text-align: center;
+}
+
+#excluir {
+    background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
+}
+
+#adicionar {
+    background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
+}
+
+#fechar {
+    background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
 }

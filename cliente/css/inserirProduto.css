@@ -23,6 +23,7 @@
     button {
         width: auto;
         margin: auto;
+        background-image: linear-gradient(45deg, #1FFFE3, #9821FF);
     }
     
     .btns {
@@ -30,6 +31,14 @@
         display: flex;
         align-items: center;
         width: 50vw;
+    }
+    
+    #cadastrar {
+        background-image: linear-gradient(45deg, rgba(149, 224, 28, 0.952), rgb(33, 255, 162));
+    }
+    
+    #cancelar {
+        background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
     }
     
     textarea {

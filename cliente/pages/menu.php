@@ -11,7 +11,7 @@
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="../css/menu.css">
    
     <style>
     body {
@@ -41,7 +41,8 @@
                             <ul class="tabs " >
                             <li class="tab white-text"><a class="white-text" href="#paginaInicial"> Página Inicial</a></li>
                                 <li class="tab white-text "><a class="white-text" href="#produtos"> Produtos</a></li>
-                                <li class="tab white-text"><a class="white-text" href="#clientes">Clientes</a></li>
+                                <li class="tab white-text"><a class="white-text" href="#pedidos">Pedidos</a></li>
+
                             </ul>
                         </div>
                         <ul id="mobile-menu" class="side-nav">
@@ -74,12 +75,13 @@
 </body>
 
 </html>
-<div id="paginaInicial" class="col s12" width="100vw" height="600px"><object data="pages/paginaInicial.php" type=""
+<div id="paginaInicial" class="col s12" width="100vw" height="600px"><object data="paginaInicial.php" type=""
         width="100%" height="552px"></object></div>
-<div id="produtos" class="col s12" width="100vw" height="600px"><object data="pages/listarProdutos.php" type=""
+<div id="produtos" class="col s12" width="100vw" height="600px"><object data="listarProdutos.php" type=""
         width="100%" height="552px"></object></div>
-<div id="clientes" class="col s12"><object data="pages/listarClientes.php" type="" width="100%" height="552px"></div>
-</div>
+<div id="pedidos" class="col s12"><object data="meusPedidos.php" type="" width="100%" height="552px"></div>
+
+
 <script>
 $('ul.tabs').tabs();
 $('.modal').modal();

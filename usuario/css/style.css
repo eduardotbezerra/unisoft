@@ -1,0 +1,40 @@
+input {
+    text-align: center;
+}
+
+.comprar {
+    width: 5px;
+    background-color: red;
+}
+
+.btn {
+    width: 10px;
+    background-image: linear-gradient(to right, #1FFFE3, #9821FF);
+}
+
+.btns {
+    margin-top: 45vh;
+    float: right;
+    margin-right: 10px;
+}
+
+a {
+    width: 10px;
+    color: red;
+}
+
+body {
+    font-size: 12pt;
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(to right, rgb(233, 240, 239), rgb(233, 225, 159));
+}
+
+#preco {
+    width: 1px;
+}
+
+.preco {
+    position: absolute;
+    margin-top: 46.5vh;
+}

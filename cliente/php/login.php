@@ -12,13 +12,14 @@ if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 
 $query = "select usuario from clientes where usuario = '{$vusuario}' and senha = '{$vsenha}'";
  
-$result = mysqli_query($obj_mysqli, $query);
+$result = mysqli_query($con, $query);
  
 $row = mysqli_num_rows($result);
  
 if($row == 1) {
+
 	$_SESSION['usuario'] = $usuario;
-	header('Location: ../menu.php');
+	header('Location: ../pages/menu.php');
 	exit();
 } else { echo "error";
 }

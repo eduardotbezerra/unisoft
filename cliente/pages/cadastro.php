@@ -11,7 +11,7 @@
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="css/cadastro.css">
+    <link rel="stylesheet" href="../css/cadastro.css">
 
 
 <body>
@@ -38,7 +38,7 @@
                     <input type="password" id="senha" name="senha" required>
                 </div>
                 <button type="submit" class="btn-login">Cadastrar</button>
-                <a href="index.php"class="right"> Já possuo uma conta</a>
+                <a href="../index.php"class="right"> Já possuo uma conta</a>
             </form>
         </div>
 </body>

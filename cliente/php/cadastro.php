@@ -1,14 +1,14 @@
 
 
     <?php
-$obj_mysqli = new mysqli("localhost", "root", "", "unisoft");
+$con= new mysqli("localhost", "root", "", "unisoft");
  
-if ($obj_mysqli->connect_errno) {
+if ($con->connect_errno) {
     echo "Ocorreu um erro na conexão com o banco de dados.";
     exit;
 }
  
-mysqli_set_charset($obj_mysqli, 'utf8');
+mysqli_set_charset($con, 'utf8');
         $vrestaurante   = $_POST["restaurante"];
         $vusuario  = $_POST["usuario"];
         $vemail = $_POST["email"];
@@ -22,7 +22,7 @@ mysqli_set_charset($obj_mysqli, 'utf8');
         if( $query->num_rows > 0 ) {
           echo 'Usuário já existe!';
         } else {
-        $stmt = $obj_mysqli->prepare("INSERT INTO `clientes` (`restaurante`,`usuario`,`email`,`senha`) VALUES (?,?,?,?)");
+        $stmt = $con->prepare("INSERT INTO `clientes` (`restaurante`,`usuario`,`email`,`senha`) VALUES (?,?,?,?)");
         $stmt->bind_param('ssss', $vrestaurante, $vusuario, $vemail, $vsenha);
         if (!$stmt->execute()) {
             $erro = $stmt->error;
