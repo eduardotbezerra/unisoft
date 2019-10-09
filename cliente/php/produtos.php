@@ -1,3 +1,4 @@
+
 <?php
 
 require_once 'conexao.php';
@@ -10,26 +11,52 @@ echo "<div class='container'>";
 if( isset($_POST['delete'])){
     $sql = "DELETE FROM produtos WHERE id=" . $_POST['id'];
     if($con->query($sql) === TRUE){
-        echo "<div class='alert alert-success'>Successfully delete user</div>";
+        echo "<div class='alert alert-success'>Produto Deletado</div>";
     }
 }
 
+
 $sql = "SELECT * FROM produtos";
 $result = $con->query($sql);
-echo "<a href='#modal1'id='adicionar' class='btn-floating waves-effect waves-light red modal-trigger'><i class='material-icons'>add</i></a>";
+
 
 if( $result->num_rows > 0)
+
 {
+    
+  
 ?>
+<form name="buscar" action="../php/buscaProdutos.php" method="POST">
+<div class=" search input-field">
+  <input id="search" name="search" type="search" required>
+  <label class="label-icon btn-search" for="search"><i class="material-icons">search</i></label>
+  <i class="material-icons">close</i>
+  <input value="pesquisar" id="pesquisar" class="btn waves-effect waves-blue"id="cadastrar" type="submit" name="action">
+
+</div>
+</form><br>
+
 
 <table class="table table-bordered table-striped">
     <tr>
-        <strong><td>produto</td></strong>
-        <strong><td>marca</td></strong>
-        <strong><td>quantidade</td></strong>
-        <strong><td>tipo</td></strong>
-        <strong><td>preco</td></strong>
-        <strong><td>obs</td></strong>
+        <strong>
+            <td class="title">produto</td>
+        </strong>
+        <strong>
+            <td class="title">marca</td>
+        </strong>
+        <strong>
+            <td class="title">quantidade</td>
+        </strong>
+        <strong>
+            <td class="title">tipo</td>
+        </strong>
+        <strong>
+            <td class="title">preco</td>
+        </strong>
+        <strong>
+            <td class="title">obs</td>
+        </strong>
         <td></td>
     </tr>
     <?php
@@ -43,12 +70,15 @@ if( $result->num_rows > 0)
         echo "<td>".$row['tipo'] . "</td>";
         echo "<td>".$row['preco'] . "</td>";
         echo "<td>".$row['obs'] . "</td>";
-        echo "<td><button style='width:8vw; border-radius: 5px;' id='excluir' type='submit' name='delete' value='Delete' class='waves-effect waves-light btn'>excluir</button></td>";
+        echo "<td><button style='width:8vw; border-radius: 5px;' id='excluir' type='submit' name='delete' value='Delete' class='waves-effect waves-light btn'>x</button></td>
+        ";
         echo "</tr>";
         echo "</form>"; 
+        
     }
 ?>
 </table>
+
 <?php
 }
 else

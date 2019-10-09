@@ -11,6 +11,8 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="../css/index.css">
+
 </head>
 
 <body>

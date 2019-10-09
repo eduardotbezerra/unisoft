@@ -1,75 +1,69 @@
-body {
-    font-family: Roboto, Arial, sans-serif;
-}
-
-.content {
-    width: 90%;
-    text-align: center;
-    margin: auto;
-}
-
-.modal {
-    width: 768px;
-    height: 1366px;
-}
-
-.modal-content {
-    width: 100%;
-    height: 100%;
-}
-
-table {
-    border-radius: 10px;
-    color: black;
-}
-
-.title {
-    font-family: Roboto, Arial, sans-serif;
-    background-color: rgb(8, 255, 255);
-    color: black;
-}
-
-.btn {
-    height: auto;
-}
-
-tr:hover {
-    color: black;
-    background: whitesmoke;
-}
-
-tbody {
-    display: block;
-    height: 60vh;
-    overflow: auto;
-}
-
-thead,
-tbody tr {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
-thead {
-    width: calc( 100% - 1em)
-}
-
-table {
-    width: 100%;
-    margin-top: 2vh;
-    display: flex;
-    text-align: center;
-}
-
-#excluir {
-    background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
-}
-
-#adicionar {
-    background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
-}
-
-#fechar {
-    background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
-}
+        body {
+            font-family: Roboto, Arial, sans-serif;
+        }
+        
+        .content {
+            width: 90%;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .modal {
+            width: 768px;
+            height: 1366px;
+        }
+        
+        .modal-content {
+            width: 100%;
+            height: 100%;
+        }
+        
+        table .title {
+            font-family: Roboto, Arial, sans-serif;
+            background-color: rgb(224, 233, 233);
+            border-radius: 5px;
+            color: rgb(19, 18, 18);
+        }
+        
+        .btn {
+            height: auto;
+        }
+        
+        table {
+            box-shadow: 0 0 5px rgb(188, 200, 200);
+            border-radius: 1vw;
+        }
+        
+        td {
+            color: #2c2c2c;
+            padding-bottom: 15px;
+        }
+        
+        #excluir {
+            background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
+            float: right;
+        }
+        
+        #adicionar {
+            margin-right: 10vw;
+            background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
+        }
+        
+        #fechar {
+            background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
+        }
+        
+        .search {
+            width: 40vw;
+            margin-left: 10vw;
+        }
+        
+        .search input {
+            text-align: center;
+        }
+        
+        .search #pesquisar {
+            text-align: left;
+            width: 6vw;
+            font-size: 10pt;
+        }

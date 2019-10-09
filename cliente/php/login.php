@@ -21,7 +21,20 @@ if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
 	header('Location: ../pages/menu.php');
 	exit();
-} else { echo "error";
+} else {
+
+	 
+	 
+	 header('Location:../index.php');
+	 echo '<script> alert("usuário ou senha incorreto") </script>';
+
+
+	 
+	
+
+	 
+	 
 }
+
 
 ?>

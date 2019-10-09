@@ -11,6 +11,8 @@
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
+    <script src="https://kit.fontawesome.com/8d96ddd920.js" crossorigin="anonymous"></script>
+
     <link rel="stylesheet" href="../css/listarProdutos.css">
     
     <style>
@@ -27,11 +29,11 @@
     </style>
   </head>
   <body>
-    <header>
-      
-    </header>
+  
   <div class="content">
+
     <?php
+  
     include '../php/produtos.php';
     ?>
      
