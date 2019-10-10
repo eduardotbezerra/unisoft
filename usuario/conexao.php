@@ -1,9 +1,9 @@
 
 <?php
 function Conexao(){
-      $localhost = "localhost"; //your host name
-      $username = "root"; // your database name
-      $password = ""; // your database password
+      $localhost = "localhost";
+      $username = "root";
+      $password = "";
       $dbname = "unisoft";
       
       

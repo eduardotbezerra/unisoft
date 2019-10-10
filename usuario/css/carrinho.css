@@ -1,0 +1,16 @@
+.btns {
+    float: right;
+    margin-right: 1vw;
+}
+
+.preco {
+    margin-top: 1vh;
+    margin-left: 1vw;
+    position: absolute;
+}
+
+input {
+    width: 20vw;
+    text-align: center;
+    text-transform: capitalize;
+}

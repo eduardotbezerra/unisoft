@@ -26,6 +26,7 @@ body {
 
 :root {
     --bg-color: #E8802E;
+    --font-color: gray;
 }
 
 
@@ -72,7 +73,7 @@ form .input-block input {
     margin-top: 8px;
     padding: 7px;
     font-size: 16px;
-    color: var(--bg-color);
+    color: var(--font-color);
     border-radius: 2px;
     border: 1px solid #ccddef;
     outline-color: var(--bg-color);
@@ -96,4 +97,6 @@ body {
 
 input {
     text-align: center;
+    
+    color: var(--font-color);
 }

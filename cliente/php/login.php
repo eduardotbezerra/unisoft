@@ -1,16 +1,22 @@
-<?php 
+<?php
 session_start();
-include('conexao.php');
-$vusuario = $_POST["usuario"];
+$localhost = "localhost";
+$username = "root";
+$password = ""; 
+$dbname = "unisoft";
+$con = new mysqli($localhost, $username, $password, $dbname);
+
+if($con->connect_error) {
+    die("connection failed : " . $con->connect_error);
+}
+$usuario = $_POST["usuario"];
 $vsenha = $_POST["senha"];
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 	header('Location: index.php');
 	exit();
 }
- 
-
-$query = "select usuario from clientes where usuario = '{$vusuario}' and senha = '{$vsenha}'";
+$query = "select usuario from clientes where usuario = '{$usuario}' and senha = '{$vsenha}'";
  
 $result = mysqli_query($con, $query);
  
@@ -21,19 +27,9 @@ if($row == 1) {
 	$_SESSION['usuario'] = $usuario;
 	header('Location: ../pages/menu.php');
 	exit();
-} else {
-
-	 
-	 
+} else { 
 	 header('Location:../index.php');
-	 echo '<script> alert("usuário ou senha incorreto") </script>';
 
-
-	 
-	
-
-	 
-	 
 }
 
 

@@ -32,6 +32,8 @@
         <?php
 
 include_once 'conexao.php';
+mysqli_set_charset($con, 'utf8');
+
 $pesquisa = $_POST['search'];
 ?>
         <!-- Criando tabela e cabeçalho de dados: -->

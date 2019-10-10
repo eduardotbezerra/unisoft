@@ -22,7 +22,7 @@
         <div class="form-wrapper">
             <form action="php/login.php" method="post">
                 <div class="input-block">
-                    <label for="usuario">usuario</label>
+                    <label for="usuario">Usuário</label>
                     <input type="text" id="usuario" name="usuario" required>
                 </div>
 

@@ -22,11 +22,12 @@ body {
 }
 
 
-/*  BG COLOR
+/*  variaveis
 --------------------------------------*/
 
 :root {
     --bg-color: #E8802E;
+    --font-color: gray;
 }
 
 
@@ -64,7 +65,7 @@ form .input-block {
 
 form .input-block label {
     font-size: 14px;
-    color: var(--bg-color);
+    color: var(--font-color);
 }
 
 form .input-block input {
@@ -73,10 +74,10 @@ form .input-block input {
     margin-top: 8px;
     padding: 7px;
     font-size: 16px;
-    color: var(--bg-color);
+    color: var(--font-color);
     border-radius: 2px;
     border: 1px solid #ccddef;
-    outline-color: var(--bg-color);
+    outline-color: var(--font-color);
 }
 
 form .btn-login {
@@ -93,4 +94,5 @@ form .btn-login {
 
 input {
     text-align: center;
+    color: var(--font-color);
 }

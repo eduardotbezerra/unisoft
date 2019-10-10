@@ -1,11 +1,6 @@
-
 <?php
-
 require_once 'conexao.php';
 mysqli_set_charset($con, 'utf8');
-
-
-
 echo "<div class='container'>";
 
 if( isset($_POST['delete'])){
@@ -14,16 +9,14 @@ if( isset($_POST['delete'])){
         echo "<div class='alert alert-success'>Produto Deletado</div>";
     }
 }
-
-
 $sql = "SELECT * FROM produtos";
 $result = $con->query($sql);
-
+echo '<a href="#modal1" id="adicionar" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">add</i></a>
+';
 
 if( $result->num_rows > 0)
 
-{
-    
+{  
   
 ?>
 <form name="buscar" action="../php/buscaProdutos.php" method="POST">

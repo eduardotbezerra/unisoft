@@ -45,7 +45,7 @@
         }
         
         #adicionar {
-            margin-right: 10vw;
+            margin-left: 1vw;
             background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
         }
         
@@ -66,4 +66,5 @@
             text-align: left;
             width: 6vw;
             font-size: 10pt;
+            color: var(--font-color);
         }

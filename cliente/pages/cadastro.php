@@ -18,9 +18,9 @@
     
     <section class="form-section">
         <div class="form-wrapper">
-            <form action="php/cadastro.php" method="POST">
+            <form action="../php/cadastro.php" method="POST">
                 <div class="input-block">
-                    <label for="restaurante">Restaurante</label>
+                    <label for="estabelecimento">Estabelecimento</label>
                     <input type="text" id="restaurante" name="restaurante" required>
                 </div>
                 <div class="input-block">

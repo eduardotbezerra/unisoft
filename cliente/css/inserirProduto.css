@@ -18,6 +18,7 @@
     
     input {
         text-align: center;
+        text-transform: uppercase;
     }
     
     button {
