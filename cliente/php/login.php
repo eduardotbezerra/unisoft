@@ -4,7 +4,7 @@ $localhost = "localhost";
 $username = "root";
 $password = ""; 
 $dbname = "unisoft";
-$con = new mysqli($localhost, $username, $password, $dbname);
+$con = new mysqli("localhost", "id11161822_root", "bringme2019", "id11161822_bringme");
 
 if($con->connect_error) {
     die("connection failed : " . $con->connect_error);

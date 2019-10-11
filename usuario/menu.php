@@ -5,17 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title of the document</title>
+    <title>Menu</title>
     <!-- Material Icon CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/padrao.css">
+
 
     <style>
-    
-    </style>
+    img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+        display: none;
+    }
+</style>
 </head>
 
 <body>
@@ -49,9 +53,9 @@
 
                                             <form action="php/buscaEstabelecimentos.php" method="post" style="width: 50%;" class="center black-text">
 
-                                                <input id="search" name="search" type="search" placeholder="ex: exito mercantil" require>
-                                                <button style="border-radius: 100%;"  class="btn waves-effect transparent waves-light" type="submit" name="action">
-                                                    <i class="material-icons black-text white tiny" >search</i>
+                                                <input id="search" name="search" type="search" placeholder="ex: osvaldo" require>
+                                                <button class="waves-effect material-icons  waves-red" type="submit" name="action">
+                                                    <i class="material-icons black-text " style="font-size: 1em; background-color: transparent;" >search</i>
                                                 </button>
                                                 
 

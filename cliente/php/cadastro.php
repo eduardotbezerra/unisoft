@@ -15,7 +15,7 @@ mysqli_set_charset($con, 'utf8');
         $vsenha    = $_POST["senha"];
         
       
-        $mysqli = new mysqli('localhost', 'root', '', 'unisoft');
+        $con = new mysqli("localhost", "id11161822_bringme", "bringme2019", "id11161822_root");
         $user = filter_input(INPUT_GET, 'usuario');
         $sql = "SELECT * FROM `clientes` WHERE `usuario` = '{$vusuario} ' "; 
         $query = $mysqli->query( $sql );

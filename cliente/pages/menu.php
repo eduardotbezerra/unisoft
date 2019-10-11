@@ -23,6 +23,10 @@
 
     main {
         flex: 1 0 auto;
+        
+    }
+    img[alt="www.000webhost.com"] {
+        display: none;
     }
     </style>
 </head>

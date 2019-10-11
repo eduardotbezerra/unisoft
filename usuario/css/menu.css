@@ -11,3 +11,10 @@ main {
 .background {
     background-image: linear-gradient(45deg, rgba(246, 10, 10, 0.417), rgb(151, 125, 172));
 }
+button{
+    position: absolute;
+    height: 7vh;
+    border: 0;
+    background:transparent;
+    margin-bottom: 1vh;
+}

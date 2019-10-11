@@ -1,12 +1,15 @@
 <?php
+error_reporting(0);
+
+?>
+<?php
 session_start();
 ?>
-
 <?php
 $localhost = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "unisoft";
+		$username = "id11161822_root";
+		$password = "bringme2019";
+		$dbname = "id11161822_bringme";
 		$estabelecimento = $_GET['estabelecimento'];
 	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
 	   
@@ -134,7 +137,7 @@ AlteraQuantidade();
   ///////////////////////////////////////
  // ADICIONA CARRINHO...
 //////////////////////////////////////
-        include 'conexao.php';
+        include '../php/conexao.php';
 		Conexao();
 		mysqli_set_charset($con, 'utf8');
 

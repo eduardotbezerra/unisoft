@@ -1,8 +1,8 @@
 <?php
 $localhost = "localhost"; //your host name
-$username = "root"; // your database name
-$password = ""; // your database password
-$dbname = "unisoft";
+$username = "id11161822_root"; // your database name
+$password = "bringme2019"; // your database password
+$dbname = "id11161822_bringme";
 
 
 $con = new mysqli($localhost, $username, $password, $dbname);

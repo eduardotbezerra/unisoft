@@ -4,9 +4,10 @@
 }
 
 .preco {
-    margin-top: 1vh;
-    margin-left: 1vw;
-    position: absolute;
+  
+    display:flex;
+    justify-content: center;
+    text-align:center;
 }
 
 input {

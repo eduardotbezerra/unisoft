@@ -63,7 +63,7 @@ $pesquisa = $_POST['search'];
 
             <!-- Preenchendo a tabela com os dados do banco: -->
             <?php
-$sql = "SELECT * FROM produtos WHERE produto = '$pesquisa'";
+$sql = "SELECT * FROM osvaldo WHERE produto = '$pesquisa'";
 $resultado = mysqli_query($con,$sql) or die("Erro ao retornar dados");
 
 // Obtendo os dados por meio de um loop while

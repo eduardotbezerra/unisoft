@@ -1,8 +1,11 @@
 <?php
-$localhost = "localhost"; //your host name
-$username = "root"; // your database name
-$password = ""; // your database password
-$dbname = "unisoft";
+function conexao(){
+$localhost = "localhost";
+      $username = "id11161822_root";
+      $password = "bringme2019";
+      $dbname = "id11161822_bringme";
+      $con = new mysqli($localhost, $username, $password, $dbname);
+      mysqli_set_charset($con, 'utf8');
 
 
 $con = new mysqli($localhost, $username, $password, $dbname);
@@ -10,6 +13,7 @@ mysqli_set_charset($con, 'utf8');
 
 if($con->connect_error) {
     die("connection failed : " . $con->connect_error);
+}
 }
 ?>
 

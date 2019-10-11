@@ -1,79 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-      <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <title>Title of the document</title>
-    <!-- Material Icon CDN -->
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize CSS CDN -->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- Your custom styles -->
-      <link rel="stylesheet" href="css/style.css">
-    <!-- Used as an example only to position the footer at the end of the page.
-    You can delete these styles or move it to your custom css file -->
-    <style>
-      body {
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-        }
-      main {
-        flex: 1 0 auto;
-      }
-    </style>
-  </head>
-  <body>
-<ul class="collection with-header">
-  <li class="collection-header"><h4>Produtos No Seu Carrinho</h4></li>
-  <li class="collection-item">
-  $produto
- <input type="text" name="produto['.$id.']" value="'.$quantidade.'"/> <span> kg </span>
- R$: $preco
- R$: .$subTotal.
- <a class="deletar" href="?acao=del&id='.$id.'">Remover</a>
-  
-  
-  </li>
-  
-</ul>
-  </body>
-      <!-- jQuery CDN -->
-      <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <!-- Materialize JS CDN -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-    <script>
-      $("document").ready(function(){
-        $(".button-collapse").sideNav();
-      });
-    </script>
-</html>
-  
-
-
-
-
-
-
-
-
-
-
-
-
 <?php
 error_reporting(0);
-session_start();?>
+?>
+<?php
+session_start();
+?>
 
 <?php
 $localhost = "localhost";
-		$username = "root";
-		$password = "";
-		$dbname = "unisoft";
-		
-
-	   $selecao = "SELECT * FROM produtos ORDER BY produto ASC";
+		$username = "id11161822_root";
+		$password = "bringme2019";
+		$dbname = "id11161822_bringme";
+		$estabelecimento = $_GET['estabelecimento'];
+	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
 	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
 	   mysqli_set_charset($con, 'utf8');
@@ -168,13 +106,13 @@ AlteraQuantidade();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title of the document</title>
+    <title>Carrinho</title>
     <!-- Material Icon CDN -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/carrinho.css">
 
     <style>
     body {
@@ -184,6 +122,9 @@ AlteraQuantidade();
     main {
         flex: 1 0 auto;
     }
+     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+        display: none;
+    }
     </style>
 </head>
 
@@ -191,14 +132,7 @@ AlteraQuantidade();
     <header>
     </header>
 
-    <table class="centered">
-        <tr>
-            <td>Produto</td>
-            <td>Quantidade</td>
-            <td>Preço</td>
-            <td>Sub Total</td>
-            <td>Ação</td>
-        </tr>
+   
 
         <form action="?acao=up" method="post">
             <?php
@@ -212,54 +146,65 @@ AlteraQuantidade();
 
 
           if ( count( $_SESSION['carrinho'] ) === 0 ) {
-          	echo '<tr><td> Não há podutos no carrinho </td></tr>';
+          	echo '<h4 class="center" style="display:flex; justify-content:center; margin-top: 45vh;"> Não Há Produtos No Seu Carrinho De Compras
+          	</h4>';
           }
 
           else {
           	foreach ( $_SESSION['carrinho'] as $id => $quantidade ) {
 
-          		$selecao = "SELECT * FROM produtos WHERE id = '$id'";
+          		$selecao = "SELECT * FROM $estabelecimento WHERE id = '$id'";
           		$query = mysqli_query($con,$selecao ) or die( mysqli_error() );
           		$linha = mysqli_fetch_array( $query );
 
           		$produto = $linha['produto'];
-          		$preco =  $linha['preco'];
+				  $preco =  $linha['preco'];
+				  $obs = $linha['obs'];
 				  $subTotal = $linha['preco'] * $quantidade;
 				  
 				  
           	  $total += $subTotal;
 echo '<tbody>';
-          	    echo '<tr>
-			                  <td>'.utf8_encode($produto).'</td>
-			                  <td style="width:1px"><input type="text" name="produto['.$id.']" value="'.$quantidade.'"/> <span> kg </span></td>
-			                  <td> R$: '.$preco.'</td>
-			                  <td> R$: '.$subTotal.'</td>
-			                  <td><a class="deletar" href="?acao=del&id='.$id.'">Remover</a></td>
-						  </tr>';
+echo'<ul class="collection with-header">
+
+<li class="collection-item">
+Produto: '.$produto.'<br>
+<span>Quantidade/Kg</span><br>
+<input type="text" style="" name="produto['.$id.']" value="'.$quantidade.'"/> <span></span><br>
+<span>Observação: '.$obs.'</span><br>
+<span>Preço: R$'.$preco.'</span><br>
+<span>Subtotal: R$'.$subTotal.'</span><br>
+<a class="deletar" href="?acao=del&estabelecimento='.$estabelecimento.'&id='.$id.'">Remover</a>
+
+
+
+</li>
+
+</ul>
+
+		   <div class="preco red-text" >
+		  <span>'.'TOTAL: '.'R$ '.$total.'</span>
+		  </div>
+		  <div class="btns">
+				</a>
+				</button>
+				<div>';
+
+
 						  
 						  
           	}
           }
 
-		  echo '</tbody>';
 				?>
-
-				
-				</table>
 				<?php
-				
-		  echo '<div class="preco">
-		  <span>'.'TOTAL: '.'R$ '.$total.'</span>
-		  </div>'
+	
+		  
 ?>
-				<div class="btns">
-				<a href="produtos.php" class="btn waves-effect waves-red"><i class="material-icons">undo</i>
-				</a>
-				<button type="submit" id="" class="btn waves-effect waves-red"><i class="material-icons">refresh</i>
-				</button>
-				<div>
-  
-        </form>
+			
+		</form>
+
+		
 	
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"

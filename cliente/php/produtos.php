@@ -4,12 +4,12 @@ mysqli_set_charset($con, 'utf8');
 echo "<div class='container'>";
 
 if( isset($_POST['delete'])){
-    $sql = "DELETE FROM produtos WHERE id=" . $_POST['id'];
+    $sql = "DELETE FROM exito WHERE id=" . $_POST['id'];
     if($con->query($sql) === TRUE){
         echo "<div class='alert alert-success'>Produto Deletado</div>";
     }
 }
-$sql = "SELECT * FROM produtos";
+$sql = "SELECT * FROM osvaldo";
 $result = $con->query($sql);
 echo '<a href="#modal1" id="adicionar" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">add</i></a>
 ';

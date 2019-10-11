@@ -26,8 +26,11 @@
       main {
         flex: 1 0 auto;
       }
-    </style>
-  </head>
+    img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
+        display: none;
+    }
+</style>
+</head>
   <body>
   
   <div class="content">
