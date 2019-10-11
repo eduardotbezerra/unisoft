@@ -24,10 +24,8 @@
             <div class="nav-wrapper">
                 <div class="container">
                     <a href="#" class="brand-logo center">Bring Me</a>
-                    <!-- mobile menu trigger -->
                     <a href="#" data-activates="mobile-menu" class="button-collapse show-on-large"><i
                             class="material-icons">menu</i></a>
-                    <!-- mobile and tablet menu content -->
                     <ul id="mobile-menu" class="side-nav">
                         <li>
                             <div class="userView">
@@ -43,15 +41,15 @@
                         <li style="margin-left: 4vw;">
                             <ul class="collapsible collapsible-accordion">
                                 <li>
-                                    <!-- mobile and tablet menu dropdown trigger -->
+                                   
                                     <a class="collapsible-header">Solicitar Compras</a>
                                     <div class="collapsible-body">
-                                        <!-- mobile and tablet dropdown content -->
+                                       
                                         <ul style="display:flex; justify-content:center; align-text:center;">
 
-                                            <form action="solicitarCompras.php" style="width: 50%;" class="center black-text">
+                                            <form action="php/buscaEstabelecimentos.php" method="post" style="width: 50%;" class="center black-text">
 
-                                                <input id="search" type="search" require>
+                                                <input id="search" name="search" type="search" placeholder="ex: exito mercantil" require>
                                                 <button style="border-radius: 100%;"  class="btn waves-effect transparent waves-light" type="submit" name="action">
                                                     <i class="material-icons black-text white tiny" >search</i>
                                                 </button>
@@ -95,4 +93,3 @@
 </body>
 
 </html>
-mz-tri

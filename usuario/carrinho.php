@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 session_start();
 ?>
 
@@ -8,9 +7,8 @@ $localhost = "localhost";
 		$username = "root";
 		$password = "";
 		$dbname = "unisoft";
-		
-
-	   $selecao = "SELECT * FROM produtos ORDER BY produto ASC";
+		$estabelecimento = $_GET['estabelecimento'];
+	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
 	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
 	   mysqli_set_charset($con, 'utf8');
@@ -148,12 +146,13 @@ AlteraQuantidade();
           else {
           	foreach ( $_SESSION['carrinho'] as $id => $quantidade ) {
 
-          		$selecao = "SELECT * FROM produtos WHERE id = '$id'";
+          		$selecao = "SELECT * FROM $estabelecimento WHERE id = '$id'";
           		$query = mysqli_query($con,$selecao ) or die( mysqli_error() );
           		$linha = mysqli_fetch_array( $query );
 
           		$produto = $linha['produto'];
-          		$preco =  $linha['preco'];
+				  $preco =  $linha['preco'];
+				  $obs = $linha['obs'];
 				  $subTotal = $linha['preco'] * $quantidade;
 				  
 				  
@@ -187,9 +186,7 @@ Produto: '.$produto.'<br>
 		  <span>'.'TOTAL: '.'R$ '.$total.'</span>
 		  </div>
 		  <div class="btns">
-				<a href="produtos.php" class="btn waves-effect waves-red"><i class="material-icons">undo</i>
 				</a>
-				<button type="submit" id="" class="btn waves-effect waves-red"><i class="material-icons">refresh</i>
 				</button>
 				<div>'
 		  
