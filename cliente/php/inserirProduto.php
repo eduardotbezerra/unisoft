@@ -1,3 +1,15 @@
+<?php
+
+session_start();
+error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
+
+if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['usuario']);
+  unset($_SESSION['senha']);
+}
+  $logado = $_SESSION['usuario'];
+  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,38 +21,32 @@
 </head>
 
 <body>
-    <?php
-$con = new mysqli("localhost", "id11161822_root", "bringme2019", "id11161822_bringme");
- 
-if ($con->connect_errno) {
-    echo "Ocorreu um erro na conexão com o banco de dados.";
-    exit;
-}
- 
+<?php
+include 'conexao.php';
 mysqli_set_charset($con, 'utf8');
 
-        $vproduto   = $_POST["produto"];
+
+$vproduto   = $_POST["produto"];
         $vmarca  = $_POST["marca"];
         $vquantidade = $_POST["quantidade"];
         $vtipo    = $_POST["tipo"];
         $vobs     = $_POST["obs"];
         $vpreco     = $_POST["preco"];
-        
-        $stmt = $con->prepare("INSERT INTO `osvaldo` (`produto`,`marca`,`quantidade`,`tipo`,`obs`,`preco`) VALUES (?,?,?,?,?,?)");
-        $stmt->bind_param('ssssss', $vproduto, $vmarca, $vquantidade, $vtipo, $vobs, $vpreco);
-        
-        if (!$stmt->execute()) {
-            $erro = $stmt->error;
-        } else {
-            echo "
-			<script>
-            alert('produto adicionado')
-			</script>
-			";
-		}
-	
 
-    
+if (!$con) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+$sql = "INSERT INTO produtos ( userId, produto, marca, quantidade, tipo, obs, preco)
+VALUES ( '$logado','$vproduto','$vmarca', '$vquantidade', '$vtipo','$vobs','$vpreco')";
+
+if (mysqli_query($con, $sql)) {
+    echo "Produto inserido";
+} else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($con);
+}
+
+mysqli_close($con);
 ?>
 </body>
 

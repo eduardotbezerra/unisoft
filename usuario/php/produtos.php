@@ -6,7 +6,7 @@
 		$username = "root"; 
 		$password = ""; 
 		$dbname = "unisoft";
-	   $selecao = "SELECT * FROM  osvaldo";	   
+	   $selecao = "SELECT * FROM  produtos";	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
 	   mysqli_set_charset($con, 'utf8');
 	   $query = mysqli_query( $con,$selecao ) or die( mysqli_error() );

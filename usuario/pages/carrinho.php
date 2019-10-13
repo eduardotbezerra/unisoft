@@ -7,9 +7,9 @@ session_start();
 ?>
 <?php
 $localhost = "localhost";
-		$username = "id11161822_root";
-		$password = "bringme2019";
-		$dbname = "id11161822_bringme";
+		$username = "root";
+		$password = "";
+		$dbname = "unisoft";
 		$estabelecimento = $_GET['estabelecimento'];
 	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
 	   

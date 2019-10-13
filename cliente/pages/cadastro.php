@@ -21,7 +21,7 @@
             <form action="../php/cadastro.php" method="POST">
                 <div class="input-block">
                     <label for="estabelecimento">Estabelecimento</label>
-                    <input type="text" id="restaurante" name="restaurante" required>
+                    <input type="text" id="estabelecimento" name="estabelecimento" required>
                 </div>
                 <div class="input-block">
                     <label for="password">Usuário</label>

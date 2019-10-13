@@ -38,27 +38,26 @@ error_reporting(0);
   <?php
  
     $localhost = "localhost";
-      $username = "id11161822_root";
-      $password = "bringme2019";
-      $dbname = "id11161822_bringme";
+      $username = "root";
+      $password = "";
+      $dbname = "unisoft";
       $con = new mysqli($localhost, $username, $password, $dbname);
     $search = $_POST["search"];
 
-    
-    $con = new mysqli($localhost, $username, $password, $dbname);
     mysqli_set_charset($con, 'utf8');
 
     
     if($con->connect_error) {
         die("connection failed : " . $con->connect_error);
     }
-    $sql = mysqli_query($con, "SELECT table_name FROM information_schema.tables where table_schema = 'id11161822_bringme'");
+    $sql = mysqli_query($con, "SELECT * FROM estabelecimentos"); //seleciona estabelecimentos
 
 
-    while (list ($estabelecimento) = mysqli_fetch_row ($sql)) {
-        if ($estabelecimento == $search){
-            $sql = "SELECT * FROM $search";
-$result = $con->query($sql);
+    while (list ($estabelecimento) = mysqli_fetch_row ($sql)) { // coloca todos os estabelecimentos em uma lista
+        if ($estabelecimento == $search){ //compara lista de estabelecimentos com o estabelecimento procurado pelo usuário
+          
+          $sql = "SELECT * FROM produtos WHERE userId = '$estabelecimento'";
+          $result = $con->query($sql);
            
     while( $row = $result->fetch_assoc()){
        
@@ -90,13 +89,14 @@ $result = $con->query($sql);
  </section>'
  ;
     }
-            
-            
-            
+   
+     
         }
         else{
-            
+         
+
         }
+      
         
 
     }

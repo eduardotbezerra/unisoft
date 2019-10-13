@@ -32,6 +32,21 @@
 </head>
 
 <body>
+    <?php
+session_start();
+if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['usuario']);
+  unset($_SESSION['senha']);
+  header('location:index.php');
+  }
+ 
+$logado = $_SESSION['usuario'];
+echo "<span class ='center'>";
+echo" Bem vindo $logado";
+echo "</span>";
+
+?>
     <nav>
         <div  class="bar-menu nav-wrapper">
             <div class="container">
@@ -58,7 +73,7 @@
                                     <a href="#!perfil"><img class="circle"
                                             src="http://www.ckcomunicacao.com.br/exito/wp-content/uploads/2017/12/Logo-%C3%8Axito.png"
                                             alt=""></a>
-                                    <a href="#!name"><span class="white-text name">Exito Mercantil</span></a>
+                                    <a href="#!name"><span class="white-text name"> <?php echo $logado; ?></span></a>
                                     <a href="#!phone"><span class="white-text tel" type="tel">(85) 998171611</span></a>
                                 </div>
                             </li>

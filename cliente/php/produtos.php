@@ -1,15 +1,20 @@
 <?php
+session_start()
+?>
+<?php
 require_once 'conexao.php';
 mysqli_set_charset($con, 'utf8');
 echo "<div class='container'>";
+$logado = $_SESSION['usuario'];
+
 
 if( isset($_POST['delete'])){
-    $sql = "DELETE FROM exito WHERE id=" . $_POST['id'];
+    $sql = "DELETE * FROM produtos WHERE id=" . $_POST['id'];
     if($con->query($sql) === TRUE){
         echo "<div class='alert alert-success'>Produto Deletado</div>";
     }
 }
-$sql = "SELECT * FROM osvaldo";
+$sql = "SELECT * FROM produtos WHERE userId = '$logado'";
 $result = $con->query($sql);
 echo '<a href="#modal1" id="adicionar" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">add</i></a>
 ';
@@ -28,7 +33,18 @@ if( $result->num_rows > 0)
 
 </div>
 </form><br>
+<?php
+  if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['usuario']);
+  unset($_SESSION['senha']);
+  header('location:index.php');
+  }
+ 
+$logado = $_SESSION['usuario'];
 
+
+?>
 
 <table class="table table-bordered table-striped">
     <tr>
@@ -54,8 +70,9 @@ if( $result->num_rows > 0)
     </tr>
     <?php
     while( $row = $result->fetch_assoc()){
+        
         echo "<form action='' method='POST'>";
-        echo "<input type='hidden' value='". $row['id']."' name='id' />"; 
+        echo "<input type='hide' style='display: none' value='". $row['id']."' name='id' />"; 
         echo "<tr>";
         echo "<td>".$row['produto'] . "</td>";
         echo "<td>".$row['marca'] . "</td>";

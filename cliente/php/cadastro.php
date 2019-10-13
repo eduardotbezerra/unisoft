@@ -9,21 +9,21 @@ if ($con->connect_errno) {
 }
  
 mysqli_set_charset($con, 'utf8');
-        $vrestaurante   = $_POST["restaurante"];
+        $vestabelecimento   = $_POST["estabelecimento"];
         $vusuario  = $_POST["usuario"];
         $vemail = $_POST["email"];
         $vsenha    = $_POST["senha"];
         
       
-        $con = new mysqli("localhost", "id11161822_bringme", "bringme2019", "id11161822_root");
+        $con = new mysqli("localhost", "root", "", "unisoft");
         $user = filter_input(INPUT_GET, 'usuario');
-        $sql = "SELECT * FROM `clientes` WHERE `usuario` = '{$vusuario} ' "; 
+        $sql = "SELECT * FROM `estabelecimentos` WHERE `usuario` = '{$vusuario} ' "; 
         $query = $mysqli->query( $sql );
         if( $query->num_rows > 0 ) {
           echo 'Usuário já existe!';
         } else {
-        $stmt = $con->prepare("INSERT INTO `clientes` (`restaurante`,`usuario`,`email`,`senha`) VALUES (?,?,?,?)");
-        $stmt->bind_param('ssss', $vrestaurante, $vusuario, $vemail, $vsenha);
+        $stmt = $con->prepare("INSERT INTO `estabelecimentos` (`estabelecimento`,`usuario`,`email`,`senha`) VALUES (?,?,?,?)");
+        $stmt->bind_param('ssss', $vestabelecimento, $vusuario, $vemail, $vsenha);
         if (!$stmt->execute()) {
             $erro = $stmt->error;
             echo "

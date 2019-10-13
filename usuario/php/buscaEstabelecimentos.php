@@ -39,9 +39,9 @@
         <?php
 
       $localhost = "localhost";
-      $username = "id11161822_root";
-      $password = "bringme2019";
-      $dbname = "id11161822_bringme";
+      $username = "root";
+      $password = "";
+      $dbname = "unisoft";
       $con = new mysqli($localhost, $username, $password, $dbname);
       mysqli_set_charset($con, 'utf8');
       if($con->connect_error) {
@@ -56,13 +56,13 @@ $pesquisa = $_POST['search'];
 <h5 class="center">Encontramos os seguintes estabelecimentos</h5>       
 
             <?php
-$sql = "SELECT * FROM clientes WHERE restaurante = '$pesquisa'";
+$sql = "SELECT * FROM estabelecimentos WHERE estabelecimento = '$pesquisa'";
 $resultado = mysqli_query($con,$sql) or die("Erro ao retornar dados");
 
 while ($registro = mysqli_fetch_array($resultado))
 {
-  $estabelecimento = $registro['restaurante'];
-  $id = $registro['id'];
+  $estabelecimento = $registro['estabelecimento'];
+  $id = $registro['userId'];
 echo'<form action="mostrarProdutos.php" method="post">
 
 <div class="collection">

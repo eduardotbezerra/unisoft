@@ -7,11 +7,11 @@ session_start();
 
 <?php
 $localhost = "localhost";
-		$username = "id11161822_root";
-		$password = "bringme2019";
-		$dbname = "id11161822_bringme";
+		$username = "root";
+		$password = "";
+		$dbname = "unisoft";
 		$estabelecimento = $_GET['estabelecimento'];
-	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
+	   $selecao = "SELECT * FROM produtos ORDER BY produto ASC";
 	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
 	   mysqli_set_charset($con, 'utf8');
@@ -153,7 +153,6 @@ AlteraQuantidade();
           else {
           	foreach ( $_SESSION['carrinho'] as $id => $quantidade ) {
 
-          		$selecao = "SELECT * FROM $estabelecimento WHERE id = '$id'";
           		$query = mysqli_query($con,$selecao ) or die( mysqli_error() );
           		$linha = mysqli_fetch_array( $query );
 
