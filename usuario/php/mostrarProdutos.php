@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
 
 ?>
 <!DOCTYPE html>
@@ -36,31 +36,26 @@ error_reporting(0);
   <body>
   <form action="../php/carrinho.php?acao=up" method="post">
   <?php
- 
-    $localhost = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "unisoft";
-      $con = new mysqli($localhost, $username, $password, $dbname);
-    $search = $_POST["search"];
+  $localhost = "localhost";
+  $username = "root";
+  $password = "";
+  $dbname = "unisoft";
+  $con = new mysqli($localhost, $username, $password, $dbname);
+  mysqli_set_charset($con, 'utf8');
 
-    mysqli_set_charset($con, 'utf8');
+if($con->connect_error) {
+die("connection failed : " . $con->connect_error);
+}
+  $search = $_POST['search'];
 
-    
-    if($con->connect_error) {
-        die("connection failed : " . $con->connect_error);
-    }
-    $sql = mysqli_query($con, "SELECT * FROM estabelecimentos"); //seleciona estabelecimentos
+  $query = "SELECT * FROM produtos WHERE   userId = '{$search}' ORDER BY id";
+  $estabelecimento = $search;
+  echo $estabelecimento;
 
+  if ($result = mysqli_query($con, $query)) {
 
-    while (list ($estabelecimento) = mysqli_fetch_row ($sql)) { // coloca todos os estabelecimentos em uma lista
-        if ($estabelecimento == $search){ //compara lista de estabelecimentos com o estabelecimento procurado pelo usuário
-          
-          $sql = "SELECT * FROM produtos WHERE userId = '$estabelecimento'";
-          $result = $con->query($sql);
-           
-    while( $row = $result->fetch_assoc()){
-       
+    /* fetch associative array */
+    while ($row = mysqli_fetch_assoc($result)) {
         echo '<section id="produtos">';
         echo'
         <ul class="collection">
@@ -68,8 +63,8 @@ error_reporting(0);
   '<span class="center" style="display:none;" id="estabelecimento" name="estabelecimento" value='.$estabelecimento.'>'.$estabelecimento.'</span>'.
    '<span id="produto">'.$row["produto"].'</span>'
    .'<br>'.
-   'Marca: '.
-   $row["marca"].
+   'id: '.
+   $row["id"].
    '<br>'.
    'Tipo: '.
    $row["tipo"].
@@ -86,22 +81,18 @@ error_reporting(0);
    </li>
   
  </ul>
- </section>'
- ;
-    }
-   
-     
-        }
-        else{
-         
-
-        }
-      
-        
-
-    }
+ </section>';
+ 
+  
     
 
+    }
+
+  
+}
+
+       
+       
 ?>
 <a href="../menu.php"><i class="material-icons">undor</i></a>
 

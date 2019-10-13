@@ -1,4 +1,15 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['usuario']);
+  unset($_SESSION['senha']);
+  header('location:index.php');
+  }
+ 
+$logado = $_SESSION['usuario'];
+?>
 <html lang="en">
 
 <head>
@@ -63,7 +74,7 @@ $pesquisa = $_POST['search'];
 
             <!-- Preenchendo a tabela com os dados do banco: -->
             <?php
-$sql = "SELECT * FROM produtos WHERE produto = '$pesquisa'";
+$sql = "SELECT * FROM produtos WHERE produto = '$pesquisa' AND userId = '$logado'";
 $resultado = mysqli_query($con,$sql) or die("Erro ao retornar dados");
 
 // Obtendo os dados por meio de um loop while
@@ -75,7 +86,6 @@ while ($registro = mysqli_fetch_array($resultado))
   $tipo = $registro['tipo'];
   $preco = $registro['preco'];
   $obs = $registro['obs'];
-
 
 
   echo "<tr>";

@@ -45,7 +45,7 @@
         }
         
         #adicionar {
-            position: absolute;
+            margin-bottom: 5vh;
             margin-right: 10vw;
             background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
         }

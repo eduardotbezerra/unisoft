@@ -1,5 +1,5 @@
 <?php
-error_reporting(0);
+error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -32,7 +32,6 @@ error_reporting(0);
         display: none;
     }
 </style>
-    </style>
 </head>
 
 <body>

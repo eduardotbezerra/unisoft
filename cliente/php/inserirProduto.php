@@ -1,6 +1,8 @@
 <?php
 
 session_start();
+$logado = $_SESSION['usuario'];
+
 error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
 
 if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
@@ -37,11 +39,13 @@ if (!$con) {
     die("Connection failed: " . mysqli_connect_error());
 }
 
-$sql = "INSERT INTO produtos ( userId, produto, marca, quantidade, tipo, obs, preco)
-VALUES ( '$logado','$vproduto','$vmarca', '$vquantidade', '$vtipo','$vobs','$vpreco')";
+$sql = "INSERT INTO produtos ( id,userId, produto, marca, quantidade, tipo, obs, preco)
+VALUES ( NULL, '$logado','$vproduto','$vmarca', '$vquantidade', '$vtipo','$vobs','$vpreco')";
 
 if (mysqli_query($con, $sql)) {
     echo "Produto inserido";
+    echo "no usuário :";
+    echo "$logado";
 } else {
     echo "Error: " . $sql . "<br>" . mysqli_error($con);
 }

@@ -16,7 +16,7 @@ if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 	header('Location: index.php');
 	exit();
 }
-$query = "select usuario from estabelecimentos where usuario = '{$usuario}' and senha = '{$vsenha}'";
+$query = "SELECT userId FROM estabelecimentos WHERE userId = '{$usuario}' AND senha = '{$vsenha}'";
  
 $result = mysqli_query($con, $query);
  

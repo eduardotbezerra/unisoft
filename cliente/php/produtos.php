@@ -5,6 +5,13 @@ session_start()
 require_once 'conexao.php';
 mysqli_set_charset($con, 'utf8');
 echo "<div class='container'>";
+if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
+{
+  unset($_SESSION['usuario']);
+  unset($_SESSION['senha']);
+  header('location:index.php');
+  }
+ 
 $logado = $_SESSION['usuario'];
 
 
@@ -16,7 +23,7 @@ if( isset($_POST['delete'])){
 }
 $sql = "SELECT * FROM produtos WHERE userId = '$logado'";
 $result = $con->query($sql);
-echo '<a href="#modal1" id="adicionar" class="btn-floating waves-effect waves-light red modal-trigger"><i class="material-icons">add</i></a>
+echo '<a href="#modal1" id="adicionar" class="btn-floating waves-effect waves-light red modal-trigger" style = "display: flex; justify-content: center; margin-left: 29vw;"><i class="material-icons">add</i></a>
 ';
 
 if( $result->num_rows > 0)
@@ -33,18 +40,7 @@ if( $result->num_rows > 0)
 
 </div>
 </form><br>
-<?php
-  if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
-{
-  unset($_SESSION['usuario']);
-  unset($_SESSION['senha']);
-  header('location:index.php');
-  }
- 
-$logado = $_SESSION['usuario'];
 
-
-?>
 
 <table class="table table-bordered table-striped">
     <tr>

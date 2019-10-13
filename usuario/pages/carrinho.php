@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 
 ?>
 <?php
@@ -11,6 +10,7 @@ $localhost = "localhost";
 		$password = "";
 		$dbname = "unisoft";
 		$estabelecimento = $_GET['estabelecimento'];
+		
 	   $selecao = "SELECT * FROM $estabelecimento ORDER BY produto ASC";
 	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
@@ -162,7 +162,6 @@ AlteraQuantidade();
           	  $total += $subTotal;
 echo '<tbody>';
 echo'<ul class="collection with-header">
-
 <li class="collection-item">
 Produto: '.$produto.'<br>
 <span>Quantidade/Kg</span><br>

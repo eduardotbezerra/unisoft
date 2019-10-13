@@ -1,5 +1,4 @@
 <?php
-error_reporting(0);
 ?>
 <?php
 session_start();
@@ -11,7 +10,7 @@ $localhost = "localhost";
 		$password = "";
 		$dbname = "unisoft";
 		$estabelecimento = $_GET['estabelecimento'];
-	   $selecao = "SELECT * FROM produtos ORDER BY produto ASC";
+	   $selecao = "SELECT * FROM produtos WHERE userId = '$estabelecimento' ORDER BY produto ASC";
 	   
 	   $con = new mysqli($localhost, $username, $password, $dbname);
 	   mysqli_set_charset($con, 'utf8');
@@ -153,6 +152,7 @@ AlteraQuantidade();
           else {
           	foreach ( $_SESSION['carrinho'] as $id => $quantidade ) {
 
+          		$selecao = "SELECT * FROM produtos WHERE id = '$id'";
           		$query = mysqli_query($con,$selecao ) or die( mysqli_error() );
           		$linha = mysqli_fetch_array( $query );
 
