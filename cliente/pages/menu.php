@@ -12,23 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Your custom styles -->
     <link rel="stylesheet" href="../css/menu.css">
-   
-    <style>
-    body {
-        font-family: Roboto, Arial, sans-serif;
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
 
-    main {
-        flex: 1 0 auto;
-        
-    }
-    img[alt="www.000webhost.com"] {
-        display: none;
-    }
-    </style>
 </head>
 
 <body>

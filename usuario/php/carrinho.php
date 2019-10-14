@@ -140,7 +140,6 @@ AlteraQuantidade();
  // ADICIONA CARRINHO...
 //////////////////////////////////////
         include 'conexao.php';
-		Conexao();
 		mysqli_set_charset($con, 'utf8');
 
 
@@ -179,15 +178,10 @@ Produto: '.$produto.'<br>
 
 </li>
 
-</ul>
+</ul>';
 
-		   <div class="preco red-text" >
-		  <span>'.'TOTAL: '.'R$ '.$total.'</span>
-		  </div>
-		  <div class="btns">
-				</a>
-				</button>
-				<div>';
+		  
+		 
 
 
 						  
@@ -197,6 +191,10 @@ Produto: '.$produto.'<br>
 
 				?>
 				<?php
+				echo'
+				 <div class="preco red-text" >
+				 <span>'.'TOTAL: '.'R$ '.$total.'</span>
+				 </div>';
 	
 		  
 ?>

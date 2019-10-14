@@ -1,6 +1,5 @@
    <?php
 	include 'conexao.php';
-	Conexao();
     function ListagemProdutos() {
 		$localhost = "localhost"; 
 		$username = "root"; 

@@ -34,7 +34,6 @@ error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
   </head>
   <body>
   <form action="../carrinho.php?acao=up" method="post">
-      include '../php/mostrarProdutos.php';
   
     <form>
 

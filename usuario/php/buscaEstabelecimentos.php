@@ -18,23 +18,7 @@ error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
         <link rel="stylesheet" href="../css/padrao.css">
 
     
-    <style>
-    body {
-            img[src="https://cdn.000webhost.com/000webhost..."] { display: none;}
-        
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
 
-    main {
-        flex: 1 0 auto;
-    }
-    img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
-        display: none;
-    }
-
-    </style>
 </head>
 
 <body>
