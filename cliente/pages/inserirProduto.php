@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+<?php
+session_start();
+?>
+
 <html lang="en">
 
 <head>
@@ -9,13 +12,14 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="../css/inserirProduto.css">
+
     
 
 </head>
 
+
 <body>
     <?php
-session_start();
 if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == true))
 {
   unset($_SESSION['usuario']);
@@ -56,7 +60,7 @@ if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == t
         </div>
         <div class="btns">
 
-            <button class="btn waves-effect waves-light green " id="cadastrar" type="submit" name="action">Cadastrar
+            <button class="btn waves-effect waves-light green" onclick="childWindow.location = url; id="cadastrar" type="submit" name="action">Cadastrar
                 <i class="material-icons right">send</i>
               </button>
             <button class="btn waves-effect waves-light red " id="cancelar" type="submit" name="action">cancelar

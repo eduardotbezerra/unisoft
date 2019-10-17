@@ -13,6 +13,9 @@ if((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == t
   unset($_SESSION['senha']);
 }
   $logado = $_SESSION['usuario']; //adiciona usuário logadoa variável "logado"
+$estabelecimento = $_SESSION['estabelecimento'];
+$logado = $_SESSION['usuario'];
+
   ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -39,20 +42,23 @@ mysqli_set_charset($con, 'utf8'); // para acentuar palavras
 //fim variáveis para inserir produtos;
 
 if (!$con) {
-    die("Connection failed: " . mysqli_connect_error()); //verifica se conexçao foi realizada, caso não, informa.
+    die("Connection failed: " . mysqli_connect_error()); // verifica se conexçao foi realizada, caso não, informa.
 }
 
-$sql = "INSERT INTO produtos ( id,userId, produto, marca, quantidade, tipo, obs, preco)
-VALUES ( NULL, '$logado','$vproduto','$vmarca', '$vquantidade', '$vtipo','$vobs','$vpreco')";  // insere produtos utilizand as variáveis
+$sql = "INSERT INTO produtos ( id,userId,estabelecimento, produto, marca, quantidade, tipo, obs, preco)
+VALUES ( NULL, '$logado','$estabelecimento','$vproduto','$vmarca', '$vquantidade', '$vtipo','$vobs','$vpreco')";  // insere produtos utilizand as variáveis
 
-if (mysqli_query($con, $sql)) { //verifica se produto foi inserido, se inserido retorna uma mensagem positiva
-   echo 'Produto Inserido Com Sucesso';
+if (mysqli_query($con, $sql)) { // verifica se produto foi inserido, se inserido retorna uma mensagem positiva
+    echo '<script> alert("Produto Inserido Com Sucesso") </script>';
+    header('Location: ../pages/inserirProduto.php');
+
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($con);  //verifica se produto foi inserido, se não inserido retorna uma mensagem negativa
+    echo "Error: " . $sql . "<br>" . mysqli_error($con);  // verifica se produto foi inserido, se não inserido retorna uma mensagem negativa
 }
-
-mysqli_close($con); //fecha conexão com banco de dadoss
+echo "";
+mysqli_close($con); // fecha conexão com banco de dados
 ?>
 </body>
+
 
 </html>

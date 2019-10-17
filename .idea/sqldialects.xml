@@ -2,7 +2,7 @@
 <project version="4">
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/cliente/php/inserirProduto.php" dialect="GenericSQL" />
-    <file url="file://$PROJECT_DIR$/usuario/php/mostrarProdutos.php" dialect="GenericSQL" />
+    <file url="file://$PROJECT_DIR$/usuario/php/bckp.php" dialect="GenericSQL" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

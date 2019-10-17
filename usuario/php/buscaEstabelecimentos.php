@@ -22,6 +22,7 @@ error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
 </head>
 
 <body>
+
     <div class="content">
         <?php
 

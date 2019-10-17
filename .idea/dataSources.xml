@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="Apache Derby (Embedded) - localhost" uuid="11d57152-833b-4f27-976f-00ae1d665e86">
-      <driver-ref>derby.embedded</driver-ref>
-      <synchronize>true</synchronize>
-      <jdbc-driver>org.apache.derby.jdbc.EmbeddedDriver</jdbc-driver>
-      <jdbc-url>localhost</jdbc-url>
-    </data-source>
-    <data-source source="LOCAL" name="unisoft@localhost" uuid="685c4892-4b68-4750-b03d-0ebba7d2943e">
+    <data-source source="LOCAL" name="unisoft@localhost" uuid="31fedebc-062a-4e53-9979-d1d0b85039a9">
       <driver-ref>mariadb</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>

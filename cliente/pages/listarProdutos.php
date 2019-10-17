@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,34 +6,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Title of the document</title>
-    <!-- Material Icon CDN -->
+    <title>Listar Produtos</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!-- Materialize CSS CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!-- Your custom styles -->
     <script src="https://kit.fontawesome.com/8d96ddd920.js" crossorigin="anonymous"></script>
-
     <link rel="stylesheet" href="../css/listarProdutos.css">
 
-
-    <style>
-    body {
-        font-family: Roboto, Arial, sans-serif;
-
-        display: flex;
-        min-height: 100vh;
-        flex-direction: column;
-    }
-
-    main {
-        flex: 1 0 auto;
-    }
-
-    img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
-        display: none;
-    }
-    </style>
 </head>
 
 <body>

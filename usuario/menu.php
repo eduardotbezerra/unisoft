@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+<?php
+//Iniciando a sessão:
+
+    session_start();
+$_SESSION['usuario'] = "jão";
+$usuario = $_SESSION['usuario'];
+$logado = $_SESSION['usuario'];
+?>
 <html lang="en">
     
 
@@ -14,8 +21,6 @@
     <!-- Your custom styles -->
     <link rel="stylesheet" href="css/menu.css">
     <link rel="stylesheet" href="css/padrao.css">
-
-
     <style>
     img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"] {
         display: none;
@@ -38,7 +43,7 @@
 
                                 </div>
                                 <a href="#!user"><img class="circle" src="img/perfil.png" alt=""></a>
-                                <a href="#!name"><span class="white-text name">Carlos Eduardo</span></a>
+                                <a href="#!name"><span class="white-text name"><?php echo $logado ?></span></a>
                                 <a href="#!email"><span class="white-text email">Rua dos desgovernados</span></a>
                             </div>
                         </li>

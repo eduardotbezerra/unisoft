@@ -8,12 +8,14 @@ if($con->connect_error) {
 }
 $usuario = $_POST["usuario"];
 $vsenha = $_POST["senha"];
+$telefone = $_POST["telefone"];
+$estabelecimento = $_POST["estabelecimento"];
 
 if(empty($_POST['usuario']) || empty($_POST['senha'])) {
 	header('Location: index.php');
 	exit();
 }
-$query = "SELECT userId FROM estabelecimentos WHERE userId = '{$usuario}' AND senha = '{$vsenha}'";
+$query = "SELECT userId FROM estabelecimentos WHERE userId = '{$usuario}' AND senha = '{$vsenha}' AND estabelecimento = '{$estabelecimento}' ";
  
 $result = mysqli_query($con, $query);
  
@@ -23,8 +25,9 @@ if($row == 1) {
 
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['senha'] = $senha;
-	
-	
+    $_SESSION['telefone'] = $telefone;
+    $_SESSION['estabelecimento'] = $estabelecimento;
+
 	header('Location: ../pages/menu.php');
 	exit();
 } else { 

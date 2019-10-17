@@ -8,6 +8,7 @@ if ((!isset ($_SESSION['usuario']) == true) and (!isset ($_SESSION['senha']) == 
 }
 
 $logado = $_SESSION['usuario'];
+
 ?>
 <html lang="en">
 
@@ -15,7 +16,7 @@ $logado = $_SESSION['usuario'];
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Title of the document</title>
+    <title>Buscar Produtos</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <link rel="stylesheet" href="../css/listarProdutos.css">
@@ -25,7 +26,7 @@ $logado = $_SESSION['usuario'];
 <div class="content">
     <?php
 
-    include_once 'conexao.php';
+    include '../php/conexao.php';
     mysqli_set_charset($con, 'utf8');
 
     $pesquisa = $_POST['search'];
@@ -53,7 +54,7 @@ $logado = $_SESSION['usuario'];
             </strong>
             <td></td>
         </tr>
-        <a href="../pages/listarProdutos.php">Voltar</a>
+        <a href="listarProdutos.php">Voltar</a>
 
         <!-- Preenchendo a tabela com os dados do banco: -->
         <?php
