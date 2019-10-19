@@ -5,6 +5,10 @@
     
 $usuario = $_SESSION['usuario'];
 $nome = $_SESSION['nome'];
+$endereco = $_SESSION['endereco'];
+
+
+
 ?>
 <html lang="en">
     
@@ -44,7 +48,7 @@ $nome = $_SESSION['nome'];
                                 </div>
                                 <a href="#!user"><img class="circle" src="img/perfil.png" alt=""></a>
                                 <a href="#!name"><span class="white-text name"><?php echo $nome ?></span></a>
-                                <a href="#!email"><span class="white-text email">Rua dos desgovernados</span></a>
+                                <a href="#!email"><span class="white-text email"><?php echo $endereco ?></span></a>
                             </div>
                         </li>
                         <li>

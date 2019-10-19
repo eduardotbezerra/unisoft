@@ -26,8 +26,8 @@ if ($row == 1) {
         //fim de variáveis
 echo 'a';
         //inicio de insert ta na tabela estabelecimentos
-        $sql = "INSERT INTO usuarios ( id,userId, usuario, endereco, email, senha, numero)
-VALUES ( NULL, '$userId','$usuario', '$endereco', '$email', '$senha', '$numero')"; 
+        $sql = "INSERT INTO usuarios ( id,userId, nome, usuario,endereco, email, senha, numero)
+VALUES ( NULL, '$userId', '$nome','$usuario','$endereco', '$email', '$senha', '$numero')"; 
         //fim de insert ta na tabela estabelecimentos
 
 

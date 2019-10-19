@@ -18,16 +18,20 @@
     <section class="form-section">
         <h1>entrar</h1>
         <div class="form-wrapper">
-            <form action="" method="">
+            <form action="../php/login.php" method="post">
+            <div class="input-block">
+                    <input type="text" placeholder="Nome" name = "nome" required>
+                </div>
                 <div class="input-block">
-                    <input type="text" placeholder="Usuário" required>
+                    <input type="text" placeholder="Usuário" name = "usuario" required>
                 </div>
 
                 <div class="input-block">
-                    <input type="password" placeholder="Senha" required>
+                    <input type="password" placeholder="Senha" name = "senha" required>
                 </div>
 
                 <button class="btn-cadastro" type="submit">login</button>
+                <a href = "cadastro.php" class ="right"> Não tenho uma conta <a>
             </form>
         </div>
     </section>

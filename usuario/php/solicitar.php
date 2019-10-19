@@ -2,7 +2,12 @@
 session_start();
 $nome = $_SESSION['nome'];
 $logado = $_SESSION['usuario'];
-include 'conexao.php';
+$endereco = $_SESSION['endereco'];
+
+echo $logado;
+echo $endereco;
+
+
 $estabelecimento = $_POST["estabelecimento"];
 $produto = $_POST["produto"];
 $marca = $_POST["marca"];
@@ -10,7 +15,7 @@ $tipo = $_POST["tipo"];
 $obs = $_POST["obs"];
 $preco = $_POST["preco"];
 
-
+include 'conexao.php';
         $sql = "INSERT INTO pedidos (estabelecimento,usuario,produto,marca,tipo,preco,obs)
     VALUES ('$estabelecimento','$nome','$produto','$marca', '$tipo', '$preco', '$obs')";
         if (mysqli_query($con, $sql)) { // verifica se produto foi inserido, se inserido retorna uma mensagem positiva

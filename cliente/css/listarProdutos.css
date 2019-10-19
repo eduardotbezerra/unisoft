@@ -44,6 +44,7 @@ table {
     box-shadow: 0 0 5px rgb(188, 200, 200);
     border-radius: 2vw;
     background-image: linear-gradient(45deg, cornflowerblue, cyan);
+    text-align: center;
 }
 
 #scrolltable {
@@ -85,6 +86,11 @@ table th div {
     background-image: linear-gradient(45deg, rgb(253, 0, 0), rgb(223, 65, 25));
 }
 
+#editar {
+    border-radius: 20px;
+    background-image: linear-gradient(100deg, rgba(230, 241, 237, 0.952), rgb(33, 118, 255));
+}
+
 .search {
     width: 40vw;
     margin-left: 10vw;
@@ -94,9 +100,16 @@ table th div {
     text-align: center;
 }
 
+.search input:hover {
+    color: white;
+    border-radius: 5vw;
+    background-image: linear-gradient(100deg, rgba(144, 230, 230, 0.952), rgb(154, 168, 189));
+}
+
 .search #pesquisar {
     text-align: left;
     width: 6vw;
     font-size: 10pt;
-    color: var(--font-color);
+    color: white;
+    background-image: linear-gradient(100deg, rgba(149, 224, 28, 0.952), rgb(33, 118, 255));
 }

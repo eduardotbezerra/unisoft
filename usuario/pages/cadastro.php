@@ -41,6 +41,8 @@
                 </div>
 
                 <button class="btn-cadastro" type="submit">Cadastrar</button>
+                <a href = "login.php" style = "margin-left: 4vw;"> Já tenho uma conta <a>
+
             </form>
         </div>
     </section>

@@ -26,16 +26,8 @@ error_reporting(E_ALL|E_STRICT); //Irá mostrar qualquer erro
     <div class="content">
         <?php
 
-      $localhost = "localhost";
-      $username = "root";
-      $password = "";
-      $dbname = "unisoft";
-      $con = new mysqli($localhost, $username, $password, $dbname);
-      mysqli_set_charset($con, 'utf8');
-      if($con->connect_error) {
-          die("connection failed : " . $con->connect_error);
-          echo 'Houve um erro, por favor informe o administrador';
-}
+     include 'conexao.php';
+
 mysqli_set_charset($con, 'utf8');
 
 $pesquisa = $_POST['search'];

@@ -18,12 +18,13 @@ while ($registro = mysqli_fetch_array($resultado)) {
         <div style = "">
          <a href = "#' . $nome . '"class ="modal-trigger">
          <div>Cliente:<span class = "green-text"> ' . $nome . '</span><div>
-         <span>Pedido número: '.$registro['id'].'</span>
-
-
+         Pedido número:<span class = "green-text"> '.$registro['id'].'</span></div>
          </a>
          </h6>
          </li>
+         <div>
+
+         </div>
         <li class="collection-item">
       <div style = "display:flex; justify-content: space-between; margin-top: 30vh; ">
         <button class = "btn right waves-white waves-effect"><i class = "material-icons">shopping_cart</i></button>

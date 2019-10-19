@@ -32,7 +32,7 @@ session_start();
   <?php
 $logado = $_SESSION['usuario'];
 $estabelecimento = $_SESSION['estabelecimento'];
-    include '../php/conexao.php';
+    include 'conexao.php';
   $mysqli = new mysqli("localhost", "root", "", "unisoft");
 
 if (mysqli_connect_errno()) {

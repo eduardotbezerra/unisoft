@@ -26,8 +26,8 @@ if ($result->num_rows > 0) {
             <input id="search" name="search" type="search" required>
             <label class="label-icon btn-search" for="search"><i class="material-icons">search</i></label>
             <i class="material-icons">close</i>
-            <input value="pesquisar" id="pesquisar" class="btn waves-effect waves-blue" id="cadastrar" type="submit"
-                   name="action">
+            <button value="pesquisar" id="pesquisar" class="btn waves-effect waves-blue" id="cadastrar" type="submit"
+                   name="action"><i class="material-icons">search</i></button>
 
         </div>
     </form><br>
@@ -71,7 +71,7 @@ if ($result->num_rows > 0) {
                 echo "<td>" . $row['preco'] . "</td>";
                 echo "<td>" . $row['obs'] . "</td>
                 <td><a href='../php/delete.php?id=" . $row['id'] . "'><button type='button' class='btn red' style='border-radius: 20px;'>x</button></a>
-                <a href='../php/delete.php?id=" . $row['id'] . "'><button type='button' class='btn white black-text' style='border-radius: 20px;'>Editar</button></a>
+                <a href='../php/delete.php?id=" . $row['id'] . "'><button type='button' class='btn white black-text' id = 'editar'>Editar</button></a>
                 
                 </td>";
 

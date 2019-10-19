@@ -7,29 +7,35 @@ if($con->connect_error) {
     die("connection failed : " . $con->connect_error);
 }
 $usuario = $_POST["usuario"];
-$vsenha = $_POST["senha"];
+$senha = $_POST["senha"];
 $nome = $_POST["nome"];
 
-$query = "SELECT userId FROM usuarios WHERE userId = '{$usuario}' AND senha = '{$vsenha}' AND estabelecimento = '{$estabelecimento}' ";
+$query = "SELECT * FROM usuarios WHERE userId = '{$usuario}' AND senha = '{$senha}' and nome = '{$nome}'";
+
  
 $result = mysqli_query($con, $query);
  
 $row = mysqli_num_rows($result);
+$endereco = $row['endereco'];
  
 if($row == 1) {
-	
+	$query = "SELECT * FROM usuarios WHERE userId = '{$usuario}' AND senha = '{$senha}'";
+	$result = mysqli_query($con, $query);
+	$row = mysqli_num_rows($result);
 
 	$_SESSION['usuario'] = $usuario;
 	$_SESSION['senha'] = $senha;
-    $_SESSION['telefone'] = $telefone;
-    $_SESSION['estabelecimento'] = $estabelecimento;
+	$_SESSION['nome'] = $nome;
+	$_SESSION['endereco'] = $endereco;
 
-	header('Location: ../pages/menu.php');
+
+
+	header('Location: ../menu.php');
 	exit();
 } else { 
-	unset ($_SESSION['login']);
+	unset ($_SESSION['usuario']);
   unset ($_SESSION['senha']);
-	 header('Location:../index.php');
+	 header('Location:../pages/login.php');
 
 }
 

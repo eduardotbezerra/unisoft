@@ -16,7 +16,8 @@
 
 <body>
 
-    <div class="content">
+
+    <div class="content" >
 
         <?php
   
@@ -56,6 +57,7 @@
         $(this).parent().parent().remove();
     });
     </script>
+    
 </body>
 
 </html>
