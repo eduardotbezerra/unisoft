@@ -57,7 +57,7 @@ $estabelecimento = $_SESSION['estabelecimento'];
                     <div class="background" style="background-color: #FF6A20">
 
                     </div>
-                    <a href="#!name"><span class="white-text name center"> <?php echo $estabelecimento; ?></span></a>
+                    <span class="white-text name center"><h5> <?php echo $estabelecimento; ?></h5></span>
                     <a href="#!phone"><span class="white-text tel" type="tel"><?php echo $telefone; ?></span></a>
                 </div>
             </li>

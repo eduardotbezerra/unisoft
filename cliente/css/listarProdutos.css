@@ -1,7 +1,5 @@
-
-
 body {
-    font-family: Roboto, Arial, sans-serif;
+    font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -46,26 +44,28 @@ table {
     box-shadow: 0 0 5px rgb(188, 200, 200);
     border-radius: 2vw;
     background-image: linear-gradient(45deg, cornflowerblue, cyan);
-
 }
+
 #scrolltable {
     height: 330px;
     overflow: auto;
 }
+
 #scrolltable th div {
     position: absolute;
     margin-top: -20px;
 }
+
 td {
     color: whitesmoke;
     font-size: 1.2em;
 }
 
-
 table {
     height: 10px;
     overflow: auto;
 }
+
 table th div {
     background-color: red;
     position: absolute;

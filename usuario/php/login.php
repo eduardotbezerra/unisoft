@@ -8,14 +8,9 @@ if($con->connect_error) {
 }
 $usuario = $_POST["usuario"];
 $vsenha = $_POST["senha"];
-$telefone = $_POST["telefone"];
-$estabelecimento = $_POST["estabelecimento"];
+$nome = $_POST["nome"];
 
-if(empty($_POST['usuario']) || empty($_POST['senha'])) {
-	header('Location: index.php');
-	exit();
-}
-$query = "SELECT userId FROM estabelecimentos WHERE userId = '{$usuario}' AND senha = '{$vsenha}' AND estabelecimento = '{$estabelecimento}' ";
+$query = "SELECT userId FROM usuarios WHERE userId = '{$usuario}' AND senha = '{$vsenha}' AND estabelecimento = '{$estabelecimento}' ";
  
 $result = mysqli_query($con, $query);
  

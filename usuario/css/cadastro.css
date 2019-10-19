@@ -1,27 +1,35 @@
 /*  RESET
 -------------------------------------*/
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-html, body{
+
+html,
+body {
     height: 100vh;
 }
-body{
+
+body {
     font-family: 'Lato', sans-serif;
 }
 
+
 /*  BG - COLOR
 -------------------------------------*/
-:root{
+
+:root {
     --primary-color: #1fffe3;
     --secondary-color: #9821FF;
 }
 
+
 /*  TOP
 -------------------------------------*/
-.header-top{
+
+.header-top {
     width: 100vw;
     height: 135px;
     background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
@@ -31,31 +39,37 @@ body{
     align-items: center;
     margin-bottom: 30px;
 }
-.header-top h1{
+
+.header-top h1 {
     color: #fff;
     font-size: 4em;
 }
 
+
 /*  FORM SECTION
 -------------------------------------*/
-.form-section{
+
+.form-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
 }
-.form-section h1{
+
+.form-section h1 {
     color: #777;
     margin-bottom: 30px;
     font-size: 1.8em;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-form .input-block{
+
+form .input-block {
     margin-bottom: 20px;
 }
-form .input-block input{
+
+form .input-block input {
     width: 100%;
     color: #777;
     display: block;
@@ -66,10 +80,12 @@ form .input-block input{
     outline: none;
     box-shadow: 0 2px 2px #d3d3d3;
 }
-form .input-block input:focus{
+
+form .input-block input:focus {
     border-color: var(--primary-color);
 }
-form .btn-cadastro{
+
+form .btn-cadastro {
     background-image: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
     color: #fff;
     padding: 10px;
@@ -82,10 +98,12 @@ form .btn-cadastro{
     cursor: pointer;
 }
 
+
 /*  SMALL DEVICES - SMARTPHONES
 -------------------------------------*/
-@media screen and (max-width: 700px){
-    .form-wrapper{
+
+@media screen and (max-width: 700px) {
+    .form-wrapper {
         min-width: 50%;
     }
 }

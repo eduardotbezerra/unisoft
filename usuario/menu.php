@@ -2,9 +2,9 @@
 //Iniciando a sessão:
 
     session_start();
-$_SESSION['usuario'] = "jão";
+    
 $usuario = $_SESSION['usuario'];
-$logado = $_SESSION['usuario'];
+$nome = $_SESSION['nome'];
 ?>
 <html lang="en">
     
@@ -43,7 +43,7 @@ $logado = $_SESSION['usuario'];
 
                                 </div>
                                 <a href="#!user"><img class="circle" src="img/perfil.png" alt=""></a>
-                                <a href="#!name"><span class="white-text name"><?php echo $logado ?></span></a>
+                                <a href="#!name"><span class="white-text name"><?php echo $nome ?></span></a>
                                 <a href="#!email"><span class="white-text email">Rua dos desgovernados</span></a>
                             </div>
                         </li>
